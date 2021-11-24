@@ -1,0 +1,6 @@
+function invert(array $a): array {
+  foreach ($a as $key => $value){
+    $a[$key] = -$value;
+  }
+  return $a;
+}
