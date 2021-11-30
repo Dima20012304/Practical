@@ -1,0 +1,8 @@
+function find_average($array) {
+  $size = count($array);
+  $sum = 0;
+  foreach($array as $a){
+    $sum += $a;
+  }
+  return $sum/$size;
+}
