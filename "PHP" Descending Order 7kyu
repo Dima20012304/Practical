@@ -1,0 +1,8 @@
+function descendingOrder(int $number): int {
+  if($number < 0) {
+    throw new InvalidArgumentException("The param \$number must be a positive integer");
+  }
+  $numarray = str_split($number);
+  rsort($numarray);
+  return (int) join($numarray);
+}
