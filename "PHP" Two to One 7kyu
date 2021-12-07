@@ -1,0 +1,20 @@
+function longest($stringone, $stringtwo)
+{
+    $combinedString = $stringone . $stringtwo;
+    $stringonerrayString = str_split($combinedString);
+    $stringonerrayString = (array)$stringonerrayString;
+    $uniqueString = array_unique($stringonerrayString);
+    sort($uniqueString);
+    return implode($uniqueString);
+}
+
+// Alternate solution
+
+function altlongest($stringone, $stringtwo)
+{
+    $stringToSplit = str_split($stringone . $stringtwo);
+    $stringToSplit = (array)$stringToSplit;
+    $chars = array_unique($stringToSplit);
+    sort($chars);
+    return implode('', $chars);
+}
