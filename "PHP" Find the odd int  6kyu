@@ -1,0 +1,27 @@
+function findIt(array $arr) : int
+{
+    $count = 0;
+    $arrCount = count($arr);
+    for ($i = 0;  $i < $arrCount; $i++) {
+        for ($j = 0; $j < $arrCount; $j++) {
+            if ($arr[$i] == $arr[$j]) {
+                $count++;
+            }
+        }
+        if ($count % 2 != 0) {
+            return $arr[$i];
+        }
+    }
+    return -1;
+}
+
+function altfindIt(array $seq) : mixed
+{
+    $nums = array_count_values($seq);
+    foreach ($nums as $key => $val) {
+        if ($val % 2) {
+            return $key;
+        }
+    }
+    return -1;
+}
