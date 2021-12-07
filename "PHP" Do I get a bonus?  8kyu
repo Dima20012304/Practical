@@ -1,0 +1,4 @@
+function bonusTime($salary, $bonus) {
+    $bonus == true ? $salary = $salary * 10 : $salary = $salary;
+    return '$'.$salary;
+}
