@@ -1,0 +1,44 @@
+function persistence(int $num): int
+{
+
+    $num = (int)$num;
+    $total = 1;
+    
+    $numArray = str_split($num);
+    // Additional type check
+    if (true===$numArray) {
+        return 0;
+    }
+    $numArrayCount = count($numArray);
+    $count = 0;
+  
+    if ($numArrayCount > 1) {
+        for ($i = 0; $i < $numArrayCount; $i++) {
+            $total *= $numArray[$i];
+        }
+        $count++;
+        if (strlen($total) > 1) {
+            return $count + persistence($total);
+        }
+        return $count;
+    }
+    return $count;
+}
+
+
+function altPersistence(int $num): int
+{
+  
+    $num = (int)$num;
+    $splitNum = str_split($num);
+    if (true===$splitNum) {
+        return 0;
+    }
+    $count = 0;
+    while ($num > 9) {
+        $num = array_product($splitNum);
+        $count++;
+    }
+  
+    return $count;
+}
