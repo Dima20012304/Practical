@@ -1,0 +1,12 @@
+
+function smallEnough($a, $limit)
+{
+    $result = true;
+    array_map(function($item) use(&$result, $limit) {
+        if ($item > $limit) {
+            $result = false;
+        }
+    }, $a);
+
+    return $result;
+}
