@@ -1,0 +1,16 @@
+class Beer extends Poison {
+    public function drink() {
+        return 'string';
+    }
+}
+
+class Wine extends Poison {
+
+    public function observe() {
+        return 'not drinkable';
+    }
+    
+    public function drink() {
+        return 'wine';
+    }
+}
